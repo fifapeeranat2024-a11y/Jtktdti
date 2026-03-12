@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title id="t-tag">EGO HUB</title>
+
+    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/C5kbyRqx/Screenshot-2026-03-07-03-10-53-83-680d03679600f7af0b4c700c6b270fe7.jpg">
+    <link rel="apple-touch-icon" href="https://i.ibb.co/C5kbyRqx/Screenshot-2026-03-07-03-10-53-83-680d03679600f7af0b4c700c6b270fe7.jpg">
+    <meta name="mobile-web-app-capable" content="yes">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prettier/2.8.8/standalone.js"></script>
@@ -39,14 +44,11 @@
         <div class="glass w-full max-w-md p-12 rounded-[3.5rem] text-center fade-in border-blue-500/20 shadow-2xl">
             <img id="a-icon" src="https://i.ibb.co/C5kbyRqx/Screenshot-2026-03-07-03-10-53-83-680d03679600f7af0b4c700c6b270fe7.jpg" class="w-24 h-24 mx-auto mb-6 rounded-3xl border-2 border-blue-500/20 shadow-2xl">
             <h2 id="a-name" class="text-4xl font-black text-white italic tracking-tighter mb-2 uppercase"></h2>
-            <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest mb-10">Access Key Required</p>
+            <p class="text-slate-500 text-[10px] font-bold uppercase tracking-widest mb-10">License Key Required</p>
             
             <div class="space-y-6 text-left">
-                <div class="relative">
-                    <input id="k-in" type="text" placeholder="ENTER LICENSE KEY" class="w-full p-5 rounded-2xl bg-slate-950 border border-slate-800 outline-none text-center font-mono text-blue-400 tracking-widest text-sm focus:border-blue-500 transition-all">
-                </div>
-                <button onclick="vK()" class="w-full bg-blue-600 p-5 rounded-2xl font-black text-white hover:bg-blue-500 shadow-xl shadow-blue-600/30 active:scale-95 transition-all">ACTIVATE SESSION</button>
-                <p class="text-center text-[9px] text-slate-600 font-bold italic mt-4 uppercase">Secured by EGO-SYSTEM Obfuscator</p>
+                <input id="k-in" type="text" placeholder="ENTER KEY: GGG-XXXXX-XXXX" class="w-full p-5 rounded-2xl bg-slate-950 border border-slate-800 outline-none text-center font-mono text-blue-400 tracking-widest text-sm focus:border-blue-500 transition-all">
+                <button onclick="vK()" class="w-full bg-blue-600 p-5 rounded-2xl font-black text-white hover:bg-blue-500 shadow-xl shadow-blue-600/30 active:scale-95 transition-all">VERIFY LICENSE</button>
             </div>
         </div>
     </div>
@@ -58,25 +60,25 @@
                 <div>
                     <h1 id="h-name" class="text-3xl font-black text-white italic tracking-tighter"></h1>
                     <div class="flex items-center gap-2 text-[10px] font-bold text-green-500 uppercase mt-1">
-                        <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span> License Verified
+                        <span class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse"></span> License Active
                     </div>
                 </div>
             </div>
             <button onclick="localStorage.removeItem('ego_key'); location.reload();" class="bg-red-950/20 text-red-500 p-4 rounded-2xl border border-red-500/20 hover:bg-red-500/30 transition-all">
-                <i data-lucide="shield-alert"></i>
+                <i data-lucide="log-out"></i>
             </button>
         </header>
 
         <div class="flex flex-col lg:flex-row gap-6 flex-grow overflow-hidden pb-6">
             <div class="glass flex-grow p-6 rounded-[3rem] flex flex-col border-white/5">
                 <div class="flex justify-between mb-4 px-2">
-                    <button onclick="oF()" class="bg-blue-600/10 text-blue-400 px-6 py-2.5 rounded-xl text-xs font-black border border-blue-500/20">LOAD FILE</button>
+                    <button onclick="oF()" class="bg-blue-600/10 text-blue-400 px-6 py-2.5 rounded-xl text-xs font-black border border-blue-500/20">OPEN</button>
                     <button id="svB" onclick="sF()" class="hidden bg-green-600/20 text-green-400 px-6 py-2.5 rounded-xl text-xs font-black border border-green-500/20">SAVE</button>
                 </div>
-                <textarea id="ed" class="terminal w-full flex-grow p-8 rounded-[2.5rem] outline-none text-blue-300 resize-none text-sm border border-white/5 shadow-inner" placeholder="// System Ready. Input EGO-Script..."></textarea>
+                <textarea id="ed" class="terminal w-full flex-grow p-8 rounded-[2.5rem] outline-none text-blue-300 resize-none text-sm border border-white/5" placeholder="// Environment Secure. Ready for Scripting..."></textarea>
             </div>
             <div class="lg:w-80 flex flex-col">
-                <div class="glass flex-grow rounded-[3rem] overflow-hidden flex flex-col border-slate-800 shadow-2xl">
+                <div class="glass flex-grow rounded-[3rem] overflow-hidden flex flex-col border-slate-800">
                     <div id="tO" class="terminal flex-grow p-6 overflow-y-auto text-[11px] font-mono leading-relaxed"></div>
                     <div class="bg-black p-4 flex gap-2 border-t border-slate-800">
                         <span class="text-blue-600 font-bold ml-1">$</span>
@@ -88,15 +90,13 @@
     </div>
 
     <script>
-        // --- 1. ENCRYPTED BRAND & KEY ---
-        // รหัสคือ GGG-64287-8468 ถูกเข้ารหัสไว้ในตัวแปรนี้
+        // รหัสผ่าน GGG-64287-8468 ถูกเข้ารหัสไว้
         const _0xK = "R0dHLTY0Mjg3LTg0Njg="; 
         const _0xN = "RUdPIEhVQg==";
 
-        // --- 2. ANTI-DEBUGGER SYSTEM ---
+        // Anti-Debugger (ป้องกันการเจาะ)
         (function(){ setInterval(()=>{ (function(){}).constructor("debugger")(); }, 1000); })();
 
-        // --- 3. UI INITIALIZATION ---
         function _(id){ return document.getElementById(id); }
 
         (function(){
@@ -105,13 +105,12 @@
             li.style.opacity = '1'; ln.innerText = name; _('t-tag').innerText = name;
 
             const i=setInterval(()=>{
-                p+=Math.floor(Math.random()*6)+3;
+                p+=Math.floor(Math.random()*7)+3;
                 if(p>=100){ p=100; clearInterval(i);
                     setTimeout(()=>{
                         _('loaderScreen').style.opacity = '0';
                         setTimeout(()=>{
                             _('loaderScreen').style.display='none';
-                            // ระบบจดจำการเข้าสู่ระบบ
                             if(localStorage.getItem('ego_key') === _0xK) {
                                 _('mainApp').style.opacity = '1';
                                 _('h-name').innerText = name;
@@ -124,29 +123,28 @@
                     }, 500);
                 }
                 b.style.width=p+'%'; l.innerText=p+'%';
-            }, 50);
+            }, 40);
         })();
 
-        // --- 4. OBFUSCATED LOGIC ENGINE ---
+        // --- OBFUSCATED SYSTEM FUNCTIONS ---
         const _0xa=['vK','k-in','authModal','mainApp','ego_key','oF','ed','svB','sF','rC','tI','tO','aF','value','classList','innerHTML','style','backgroundColor'];
         (function(_0x1,_0x2){const _0x3=function(_0x4){while(--_0x4){_0x1['push'](_0x1['shift']());}};_0x3(++_0x2);}(_0xa,0x1a4));
 
         function vK(){
             const k = _('k-in').value.trim();
-            // เช็ครหัสผ่าน GGG-64287-8468 ผ่านการถอดรหัส Base64
             if(btoa(k) === _0xK){
                 localStorage.setItem('ego_key', _0xK);
                 _('authModal').style.display='none';
                 _('mainApp').style.opacity='1';
-                logOk("Key Verified. Full Access Granted.");
+                logOk("Verified: "+k);
             } else {
-                alert("ACCESS DENIED: Invalid License Key.");
+                alert("Incorrect Key!");
                 _('k-in').value = '';
             }
         }
 
-        async function oF(){try{[window.h]=await window.showOpenFilePicker();const f=await window.h.getFile();_('ed').value=await f.text();_('svB').classList.remove('hidden');logOk("Loaded: "+f.name);}catch(e){}}
-        async function sF(){try{const w=await window.h.createWritable();await w.write(_('ed').value);await w.close();logOk("Data Synced.");}catch(e){logErr("Write Fail.");}}
+        async function oF(){try{[window.h]=await window.showOpenFilePicker();const f=await window.h.getFile();_('ed').value=await f.text();_('svB').classList.remove('hidden');logOk("Stream: "+f.name);}catch(e){}}
+        async function sF(){try{const w=await window.h.createWritable();await w.write(_('ed').value);await w.close();logOk("Success.");}catch(e){logErr("Fail.");}}
         function logErr(m){const o=_('tO');o.innerHTML+=`<div class="error-log">[✖] ${m}</div>`;o.scrollTop=o.scrollHeight;}
         function logOk(m){const o=_('tO');o.innerHTML+=`<div class="success-log">[✔] ${m}</div>`;o.scrollTop=o.scrollHeight;}
 
@@ -154,7 +152,7 @@
             const i=_('tI'), o=_('tO');
             o.innerHTML+=`<div class="text-blue-400 mt-2 font-black italic">$ ${i.value}</div>`;
             const cmd=i.value.toLowerCase();
-            if(cmd==='clear'){o.innerHTML='';} else if(cmd==='help'){logOk("Commands: clear, help, run");} else {logErr("Unknown Command.");}
+            if(cmd==='clear'){o.innerHTML='';} else if(cmd==='help'){logOk("cmds: clear, help, format");} else {logErr("Unknown.");}
             i.value=''; o.scrollTop=o.scrollHeight;
         }}
 
